@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extra</title>
+    <style>
+        body{
+            font-size: larger 20pt arial;
+            color: darkkhaki;
+            background-color: rgb(28, 28, 88);
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let meses = 12
+        let salario = Number(window.prompt('Qual o seu salario? '));
+        let salarioA = meses * salario
+
+        salarioA = salarioA.toFixed(2); //O comando to.Fixed() serve para arredondar o número para cima.
+        salarioA = Number(salarioA);
+        salarioA = salarioA.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}); //O toLocaleString retorna uma cadeia de caracteres (string) representando o objeto. Este método é feito para ser sobrescrito por objetos derivados para propósitos de localização específica.
+
+        window.alert(`O seu salario anual é de: ${salarioA,salarioA}`);
+
+    </script>
+</body>
+</html>

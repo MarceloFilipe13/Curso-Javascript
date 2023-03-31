@@ -21,12 +21,15 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dignissimos quaerat temporibus voluptatibus nisi magnam sint, ut ipsam quod nam labore veniam quia libero soluta, optio nesciunt reiciendis suscipit aperiam.</p>
     <script>
         let n1 = Number.parseInt(window.prompt('Digite um número: '));
-        let n2 = Number.parseInt(window.prompt('Digite outro número: '));
-        let s = n1 + n2
+        let n2 = Number.parseInt(window.prompt('Digite outro número: ')); //Number.parseInt ou Number.parsefloat é utilizado para converter string para número, seja inteiro ou real.
+        let n3 = Number(window.prompt('Digite mais um número: ')); //Tambem poderá usar apenas o Number, deixando o js decida se o número é inteiro ou real de acordo com o valor que ele recebeu.
+        let s = n1 + n2 + n3
 
-        window.alert('A soma dos valores é ' + s) //Concatenação
+        window.alert('A soma dos valores é ' + String(s)); //Para converter um número para string poderá ser usado com por exempçlo: s.toString() ou  String(s).
+        //Concatenação
         // (number + number) para adição
         // (string + string) para concatenação
+        window.alert(`A soma entre ${n1} e ${n2} e ${n3} é igual a ${s}`); //Colocar as variaveis dentro de um ${n1} utilizando a crase `` ao inves de aspas '' é chamado Template String, uma forma mais facil de concatenação.
 
     </script>
 </body>

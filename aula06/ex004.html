@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 004</title>
+    <style>
+        body {
+            font: normal 20pt arial;
+            font-style: italic;
+            color: rgb(34, 36, 6);
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let nome = window.prompt('Qual é seu nome?');
+        document.write(`Olá <strong>${nome}</strong>! Seu nome tem ${nome.length} letras!<br/>`); //Comando length serve para mostrar a quantidade de letras na string.
+
+        // O document.write é usado quando estamos já em uma página web e queremos imprimir uma mensagem para que o usuário veja, essa função vai escrever uma mensagem na página.
+        document.writeln(`Seu nome em maiúsculas é ${nome.toUpperCase()}<br/>`);
+        document.writeln(`Seu nome em minúsculas é ${nome.toLowerCase()}`);
+
+        //O toUpperCase() serve para mostrar a string em letras maiúsculas e toLowerCase() para mostrar em minúsculas.
+    </script>
+</body>
+</html>
