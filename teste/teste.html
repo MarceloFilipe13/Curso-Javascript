@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="fav/cross.ico" type="image/x-icon">
+    <title>Testes</title>
+    <style>
+        body
+        {
+            background-color: rgb(27, 228, 117);
+            color: rgb(211, 141, 29);
+            font: normal 20pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testes Javascript</h1>
+    <hr>
+    <p><b>Lorem ipsum</b> dolor sit amet,<i> consectetur</i> adipisicing elit.<br><strong> A incidunt eum repellat quidem? Id</strong>, assumenda molestiae a <em> sapiente ratione</em> neque <mark style="background-color: rgb(47, 129, 197);">repudiandae totam</mark> sed dolor esse, quisquam architecto maiores. Soluta, ratione. &copy;</p>
+    <p>
+        <h2>Emojis Legais</h2>
+        &#x1F596;&#x1F913;
+    </p>
+    <p>
+        <h3>Imagem Legal</h3>
+    </p>
+    <img src="image/colors.jpg" alt="colors">
+
+        <script>
+        let data = new Date();
+        let hora = data.getHours();
+        let minutos = data.getMinutes();
+        let segundos = data.getSeconds();
+
+        // Adicione um zero à esquerda se a hora, minutos ou segundos forem menores que 10
+        hora = hora < 10 ? "0" + hora : hora;
+        minutos = minutos < 10 ? "0" + minutos : minutos;
+        segundos = segundos < 10 ? "0" + segundos : segundos;
+        window.alert('Boa tarde! São exatamente: ' + hora + ":" + minutos + ":" + segundos);
+
+        let nome = window.prompt('Qual é o seu nome?');
+        let nomePet = window.prompt('Qual o nome do seu Pet?');
+
+        window.alert('É um grande prazer te conhecer, ' + nome + '!' + ' Tambem é um grande prazer conhecer o ' + nomePet + '!');
+
+        document.write('Nome: ' + nome);
+        document.write('Pet: ' + nomePet);
+    </script>
+</body>
+</html>
