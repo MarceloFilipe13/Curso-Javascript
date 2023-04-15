@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste 001</title>
+    <style>
+        #chatbot-form {
+  width: 400px;
+  height: 300px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#chatbot-output {
+  overflow-y: scroll;
+  height: 80%;
+}
+
+#chatbot-input {
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+}
+
+#chatbot-submit {
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+}
+
+    </style>
+</head>
+<body>
+    <form id="chatbot-form">
+        <div id="chatbot-output"></div>
+        <input type="text" id="chatbot-input" placeholder="Type your message here...">
+        <button type="submit" id="chatbot-submit">Send</button>
+      </form>
+</body>
+<script>
+    const chatbotForm = document.querySelector('#chatbot-form');
+    const chatbotInput = document.querySelector('#chatbot-input');
+    const chatbotOutput = document.querySelector('#chatbot-output');
+
+    chatbotForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const message = chatbotInput.value.trim();
+    if (message === '') return;
+
+    chatbotOutput.innerHTML += `<p>User: ${message}</p>`;
+    chatbotInput.value = '';
+    });
+
+    const projectId = 'your-project-id';
+    const sessionId = 'your-session-id';
+    const languageCode = 'en-US';
+
+    const sessionClient = new dialogflow.SessionsClient();
+    const sessionPath = sessionClient.sessionPath(projectId, sessionId);
+
+    chatbotForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const message = chatbotInput.value.trim();
+    if (message === '') return;
+
+    chatbotOutput.innerHTML += `<p>User: ${message}</p>`;
+    chatbotInput.value = '';
+
+    const request = {
+    session: sessionPath,
+    queryInput: {
+      text: {
+        text: message,
+        languageCode: languageCode,
+      },
+    },
+  };
+
+    const response = await sessionClient.detectIntent(request);
+    const chatbotMessage = response.queryResult.fulfillmentText;
+
+    chatbotOutput.innerHTML += `<p>Chatbot: ${chatbotMessage}</p>`;
+    });
+
+</script>
+</html>

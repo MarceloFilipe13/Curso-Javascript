@@ -30,7 +30,7 @@
 
         a.addEventListener('click', clicar)
         a.addEventListener('mouseenter', entrar)
-        a.addEventListener('mouseout', sair)
+        a.addEventListener('mouseout', sair)/*Esses três metodos são a mesma coisa que o onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()" na tag div, a diferença é que o javascript vai controlar, limpando o codigo html*/
 
         function clicar() { 
           a.innerText = 'Clicou!'
