@@ -8,21 +8,22 @@
 </head>
 <body>
     <h1>Sistema de Países</h1>
-    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h
-    <input type="button" value="Verificar" onclick="calcular()">
+    País de Moradia: <input type="text" name="txtcoun" id="txtcoun">
+    <input type="button" value="Verificar" onclick="mostrar()">
     <div id="res">
 
     </div>
     <script>
-        function calcular() {
-            let txtv = window.document.querySelector('input#txtvel')
+        function mostrar() {
+            let txtcoun = window.document.querySelector('input#txtcoun')
             let res = window.document.querySelector('div#res')
-            let vel = Number(txtv.value)
-            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}Km/h</strong></p>`
-            if (vel > 60) {
-                res.innerHTML += `<p>Você ultrapassou a velocidade permitida. MULTADO!</p>`
+            let coun = String(txtcoun.value)
+            res.innerHTML = `<p>Seu País atual é <strong>${coun}</strong></p>`
+            if (coun == 'Brasil') {
+                res.innerHTML += `<p>Brasileiro</p>`
+            } else {
+                res.innerHTML += `<p>Estrangeiro</p>`
             }
-            res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
         }
     </script>
 </body>
