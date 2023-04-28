@@ -1,0 +1,64 @@
+body {
+    background: rgb(70, 142, 236);
+    font: normal 20pt arial;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    background: white;
+    border-radius: 10px;
+    padding: 60px;
+    width:  600px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.616);
+}
+
+.div1 {
+    background-color: rgb(178, 178, 230);
+    color: white;
+    font-size: 24px;
+    font-style: oblique;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.418)
+}
+
+.div2 {
+    background-color: rgb(240, 142, 155);
+    color: white;
+    padding: 15px;
+    font-size: 24px;
+    font-style: oblique;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.418)
+}
+
+.section2 {
+    background-color: white;
+    text-align: center;
+    font-size: 30pt;
+}
+
+.div3 {
+    background-color: rgb(140, 235, 235);
+    color: white;
+    padding: 15px;
+    font-size: 24px;
+    font-style: oblique;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.418)
+
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
