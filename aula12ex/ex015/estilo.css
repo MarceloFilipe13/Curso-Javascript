@@ -4,7 +4,7 @@ body {
 }
 
 header {
-    color: white;
+    color: rgb(252, 247, 247);
     text-align: center;
 }
 
@@ -22,10 +22,11 @@ section {
     color: white;
     font-size: 24px;
     font-style: oblique;
+    color: rgba(0, 0, 0, 0.568);
     padding: 15px;
     border-radius: 8px;
     text-align: center;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.418)
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.418);
 }
 
 .div2 {
@@ -36,7 +37,7 @@ section {
     font-style: oblique;
     text-align: center;
     border-radius: 8px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.418)
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.418);
 }
 
 .section2 {
@@ -53,7 +54,8 @@ section {
     font-style: oblique;
     text-align: center;
     border-radius: 8px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.418)
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.418);
+    color: rgb(0, 0, 0, 0.568);
 
 }
 
